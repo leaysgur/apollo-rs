@@ -1,0 +1,11 @@
+"Query description"
+query withDescriptions(
+  "Very complex variable"
+  $foo: ComplexType
+  "Simple"
+  $site: Site = MOBILE
+) {
+  user(id: $foo) {
+    id
+  }
+}

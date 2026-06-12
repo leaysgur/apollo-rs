@@ -1,0 +1,22 @@
+- DOCUMENT@0..113
+    - OPERATION_DEFINITION@0..112
+        - DESCRIPTION@0..93
+            - STRING_VALUE@0..93
+                - STRING@0..93 "\"after this PR this should not be an issue: https://github.com/graphql/graphql-spec/pull/892\""
+        - WHITESPACE@93..94 "\n"
+        - OPERATION_TYPE@94..99
+            - query_KW@94..99 "query"
+        - WHITESPACE@99..100 " "
+        - NAME@100..105
+            - IDENT@100..105 "empty"
+        - WHITESPACE@105..106 " "
+        - SELECTION_SET@106..112
+            - L_CURLY@106..107 "{"
+            - WHITESPACE@107..108 " "
+            - FIELD@108..110
+                - NAME@108..110
+                    - IDENT@108..110 "id"
+            - WHITESPACE@110..111 " "
+            - R_CURLY@111..112 "}"
+    - WHITESPACE@112..113 "\n"
+recursion limit: 500, high: 1

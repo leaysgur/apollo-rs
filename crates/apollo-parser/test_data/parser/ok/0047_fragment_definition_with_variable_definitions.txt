@@ -1,0 +1,87 @@
+- DOCUMENT@0..159
+    - FRAGMENT_DEFINITION@0..158
+        - DESCRIPTION@0..22
+            - STRING_VALUE@0..22
+                - STRING@0..22 "\"Fragment description\""
+        - WHITESPACE@22..23 "\n"
+        - fragment_KW@23..31 "fragment"
+        - WHITESPACE@31..32 " "
+        - FRAGMENT_NAME@32..50
+            - NAME@32..50
+                - IDENT@32..50 "variableProfilePic"
+        - VARIABLE_DEFINITIONS@50..103
+            - L_PAREN@50..51 "("
+            - VARIABLE_DEFINITION@51..66
+                - VARIABLE@51..56
+                    - DOLLAR@51..52 "$"
+                    - NAME@52..56
+                        - IDENT@52..56 "size"
+                - COLON@56..57 ":"
+                - WHITESPACE@57..58 " "
+                - NAMED_TYPE@58..61
+                    - NAME@58..61
+                        - IDENT@58..61 "Int"
+                - WHITESPACE@61..62 " "
+                - DEFAULT_VALUE@62..66
+                    - EQ@62..63 "="
+                    - WHITESPACE@63..64 " "
+                    - INT_VALUE@64..66
+                        - INT@64..66 "32"
+            - COMMA@66..67 ","
+            - WHITESPACE@67..68 " "
+            - VARIABLE_DEFINITION@68..102
+                - DESCRIPTION@68..86
+                    - STRING_VALUE@68..86
+                        - STRING@68..86 "\"with description\""
+                - WHITESPACE@86..87 " "
+                - VARIABLE@87..94
+                    - DOLLAR@87..88 "$"
+                    - NAME@88..94
+                        - IDENT@88..94 "format"
+                - COLON@94..95 ":"
+                - WHITESPACE@95..96 " "
+                - NAMED_TYPE@96..102
+                    - NAME@96..102
+                        - IDENT@96..102 "String"
+            - R_PAREN@102..103 ")"
+        - WHITESPACE@103..104 " "
+        - TYPE_CONDITION@104..111
+            - on_KW@104..106 "on"
+            - WHITESPACE@106..107 " "
+            - NAMED_TYPE@107..111
+                - NAME@107..111
+                    - IDENT@107..111 "User"
+        - WHITESPACE@111..112 " "
+        - SELECTION_SET@112..158
+            - L_CURLY@112..113 "{"
+            - WHITESPACE@113..116 "\n  "
+            - FIELD@116..156
+                - NAME@116..126
+                    - IDENT@116..126 "profilePic"
+                - ARGUMENTS@126..156
+                    - L_PAREN@126..127 "("
+                    - ARGUMENT@127..138
+                        - NAME@127..131
+                            - IDENT@127..131 "size"
+                        - COLON@131..132 ":"
+                        - WHITESPACE@132..133 " "
+                        - VARIABLE@133..138
+                            - DOLLAR@133..134 "$"
+                            - NAME@134..138
+                                - IDENT@134..138 "size"
+                    - COMMA@138..139 ","
+                    - WHITESPACE@139..140 " "
+                    - ARGUMENT@140..155
+                        - NAME@140..146
+                            - IDENT@140..146 "format"
+                        - COLON@146..147 ":"
+                        - WHITESPACE@147..148 " "
+                        - VARIABLE@148..155
+                            - DOLLAR@148..149 "$"
+                            - NAME@149..155
+                                - IDENT@149..155 "format"
+                    - R_PAREN@155..156 ")"
+            - WHITESPACE@156..157 "\n"
+            - R_CURLY@157..158 "}"
+    - WHITESPACE@158..159 "\n"
+recursion limit: 500, high: 1

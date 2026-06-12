@@ -1,23 +1,39 @@
+use crate::parser::grammar::description;
 use crate::parser::grammar::directive;
 use crate::parser::grammar::name;
 use crate::parser::grammar::selection;
 use crate::parser::grammar::ty;
 use crate::parser::grammar::value::Constness;
+use crate::parser::grammar::variable;
 use crate::Parser;
 use crate::SyntaxKind;
 use crate::TokenKind;
 use crate::S;
 use crate::T;
 
-/// See: https://spec.graphql.org/October2021/#FragmentDefinition
+/// See: https://spec.graphql.org/draft/#FragmentDefinition
 ///
 /// *FragmentDefinition*:
-///     **fragment** FragmentName TypeCondition Directives? SelectionSet
+///     Description? **fragment** FragmentName VariableDefinitions? TypeCondition Directives? SelectionSet
+///
+/// *VariableDefinitions* on fragments are the "legacy fragment variables"
+/// syntax, accepted by graphql-js's `allowLegacyFragmentVariables` /
+/// `experimentalFragmentArguments` options.
 pub(crate) fn fragment_definition(p: &mut Parser) {
     let _g = p.start_node(SyntaxKind::FRAGMENT_DEFINITION);
+
+    if let Some(TokenKind::StringValue) = p.peek() {
+        description::description(p);
+    }
+
     p.bump(SyntaxKind::fragment_KW);
 
     fragment_name(p);
+
+    if let Some(T!['(']) = p.peek() {
+        variable::variable_definitions(p);
+    }
+
     type_condition(p);
 
     if let Some(T![@]) = p.peek() {

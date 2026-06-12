@@ -1,0 +1,84 @@
+- DOCUMENT@0..160
+    - OPERATION_DEFINITION@0..159
+        - DESCRIPTION@0..19
+            - STRING_VALUE@0..19
+                - STRING@0..19 "\"Query description\""
+        - WHITESPACE@19..20 "\n"
+        - OPERATION_TYPE@20..25
+            - query_KW@20..25 "query"
+        - WHITESPACE@25..26 " "
+        - NAME@26..42
+            - IDENT@26..42 "withDescriptions"
+        - VARIABLE_DEFINITIONS@42..125
+            - L_PAREN@42..43 "("
+            - WHITESPACE@43..46 "\n  "
+            - VARIABLE_DEFINITION@46..89
+                - DESCRIPTION@46..69
+                    - STRING_VALUE@46..69
+                        - STRING@46..69 "\"Very complex variable\""
+                - WHITESPACE@69..72 "\n  "
+                - VARIABLE@72..76
+                    - DOLLAR@72..73 "$"
+                    - NAME@73..76
+                        - IDENT@73..76 "foo"
+                - COLON@76..77 ":"
+                - WHITESPACE@77..78 " "
+                - NAMED_TYPE@78..89
+                    - NAME@78..89
+                        - IDENT@78..89 "ComplexType"
+            - WHITESPACE@89..92 "\n  "
+            - VARIABLE_DEFINITION@92..123
+                - DESCRIPTION@92..100
+                    - STRING_VALUE@92..100
+                        - STRING@92..100 "\"Simple\""
+                - WHITESPACE@100..103 "\n  "
+                - VARIABLE@103..108
+                    - DOLLAR@103..104 "$"
+                    - NAME@104..108
+                        - IDENT@104..108 "site"
+                - COLON@108..109 ":"
+                - WHITESPACE@109..110 " "
+                - NAMED_TYPE@110..114
+                    - NAME@110..114
+                        - IDENT@110..114 "Site"
+                - WHITESPACE@114..115 " "
+                - DEFAULT_VALUE@115..123
+                    - EQ@115..116 "="
+                    - WHITESPACE@116..117 " "
+                    - ENUM_VALUE@117..123
+                        - NAME@117..123
+                            - IDENT@117..123 "MOBILE"
+            - WHITESPACE@123..124 "\n"
+            - R_PAREN@124..125 ")"
+        - WHITESPACE@125..126 " "
+        - SELECTION_SET@126..159
+            - L_CURLY@126..127 "{"
+            - WHITESPACE@127..130 "\n  "
+            - FIELD@130..157
+                - NAME@130..134
+                    - IDENT@130..134 "user"
+                - ARGUMENTS@134..144
+                    - L_PAREN@134..135 "("
+                    - ARGUMENT@135..143
+                        - NAME@135..137
+                            - IDENT@135..137 "id"
+                        - COLON@137..138 ":"
+                        - WHITESPACE@138..139 " "
+                        - VARIABLE@139..143
+                            - DOLLAR@139..140 "$"
+                            - NAME@140..143
+                                - IDENT@140..143 "foo"
+                    - R_PAREN@143..144 ")"
+                - WHITESPACE@144..145 " "
+                - SELECTION_SET@145..157
+                    - L_CURLY@145..146 "{"
+                    - WHITESPACE@146..151 "\n    "
+                    - FIELD@151..153
+                        - NAME@151..153
+                            - IDENT@151..153 "id"
+                    - WHITESPACE@153..156 "\n  "
+                    - R_CURLY@156..157 "}"
+            - WHITESPACE@157..158 "\n"
+            - R_CURLY@158..159 "}"
+    - WHITESPACE@159..160 "\n"
+recursion limit: 500, high: 2

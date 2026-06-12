@@ -1,0 +1,4 @@
+"Fragment description"
+fragment variableProfilePic($size: Int = 32, "with description" $format: String) on User {
+  profilePic(size: $size, format: $format)
+}
